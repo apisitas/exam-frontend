@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        /* .section img {
+            width: 100%;
+            height: auto;
+        } */
+        .download-btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Testimonial Card */
+        .testimonial-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 280px;
+            min-height: 200px; /* Ensure consistent card height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Avatar Styles */
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #ddd;
+        }
+
+        /* Testimonial Text */
+        .testimonial-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .testimonial-text p {
+            font-style: italic;
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text h4 {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Simplified Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px);
+            }
+            .testimonials {
+                padding: 20px;
+            }
+            .testimonial-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .testimonial-item {
+                width: 100%;
+                max-width: 90%;
+                padding: 15px;
+                min-height: 180px; /* Adjusted min-height for mobile */
+            }
+            .testimonial-text p {
+                font-size: 0.9rem;
+            }
+            .testimonial-text h4 {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img width="80" src="https://img.freepik.com/free-vector/coffee-monster-logo_197582-190.jpg?w=826&t=st=1725515067~exp=1725515667~hmac=015d880d6b0d924ff101f91bc695b2633650ddd3c29a5394de8be28805d38f25">
+        <h1>Food Delivery App</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <h2>Explore Our Food Delivery Services</h2>
+        <p>Fast, reliable, and delicious meals delivered straight to your door.</p>
+        <button class="download-btn">Download App</button>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <h2>Delicious Meals Gallery</h2>
+        <div class="gallery">
+            <img src="https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 1">
+            <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 2">
+            <img src="https://images.pexels.com/photos/604969/pexels-photo-604969.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 3">
+            <img src="https://images.pexels.com/photos/70842/hot-pepper-pepper-fire-food-70842.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 4">
+            <img src="https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 5">
+            <img src="https://images.pexels.com/photos/1639556/pexels-photo-1639556.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food 6">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-item">
+                <img src="https://images.pexels.com/photos/18505361/pexels-photo-18505361/free-photo-of-woman-in-avatar-cosplay.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Avatar of Customer A" class="avatar">
+                <div class="testimonial-text">
+                    <p>"The best food delivery service I've ever used! The app is so easy to use, and the delivery is fast."</p>
+                    <h4>- Customer A</h4>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://images.pexels.com/photos/28173991/pexels-photo-28173991/free-photo-of-red-avatar.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Avatar of Customer B" class="avatar">
+                <div class="testimonial-text">
+                    <p>"Great service and delicious food!"</p>
+                    <h4>- Customer B</h4>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://images.pexels.com/photos/5774804/pexels-photo-5774804.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Avatar of Customer C" class="avatar">
+                <div class="testimonial-text">
+                    <p>"Fantastic app! I order food almost every day now, and the variety is impressive!"</p>
+                    <h4>- Customer C</h4>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://images.pexels.com/photos/20616551/pexels-photo-20616551/free-photo-of-photo-of-a-woman-in-a-costume-and-blue-body-painting-from-a-movie-avatar.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Avatar of Customer D" class="avatar">
+                <div class="testimonial-text">
+                    <p>"I love the user interface. Simple, clean, and quick!"</p>
+                    <h4>- Customer D</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Follow us on</p>
+        <a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" width="30"></a>
+        <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" width="30"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" width="30"></a>
+    </footer>
+</body>
+</html>
